@@ -3,8 +3,7 @@
 // 2. $lt
 // 3. $gt
 // 4. $ne
-// 5. $exist
-// 6. $type
+
 //! waqtd whose sal is  5000
 db.emp.find({sal:{$eq:5000}})
 [
@@ -34,12 +33,13 @@ db.emp.find({mgr:{$eq:null}})
 db.emp.find({job:{$eq:30}})
 
 //! waqtd ename and sal who are earning > than 3000
-db.emp.find({job:{$gt:30}})
+db.emp.find({sal:{$gt:3000}},{ename:1,sal:1})
 
 //! waqtd list all the emp whose design. is analyst
 db.emp.find({job:{$eq:"analyst"}})
+
 //! waqtd display all the emp name who are join after 1981
-db.emp.find({hiredate:{$gt:"1981-01-19T00:00:00.000+00:00"}})
+db.emp.find({hiredate:{$gt: new Date("1981-12-31")}})
 
 //! waqtd display deptname where the loc is dallas
 db.dept.find({loc:{$eq:"dallas"}}, {dname:1})
