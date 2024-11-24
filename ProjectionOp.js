@@ -1,6 +1,6 @@
 // Projection Operator
 // 1. $[Positional Operator]
- //  syntax : { array:'value' },{array.$:1}
+   syntax : { array:'value' },{array.$:1}
 // 2. $elematch
    syntax : {array:'value'},{array.$elematch:'value'}
 // 3. $slice
